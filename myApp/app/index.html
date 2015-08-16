@@ -10,15 +10,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <html lang="">
-fdsfasdf
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit" />
-  <title>Polymer Starter Kit</title>
+  <title>Lugo</title>
   <!-- Place favicon.ico in the `app/` directory -->
-fasdfd
+
   <!-- Chrome for Android theme color -->
   <meta name="theme-color" content="#303F9F">
 
@@ -45,7 +45,7 @@ fasdfd
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
@@ -54,15 +54,22 @@ fasdfd
   <link rel="import" href="elements/elements.html">
   <!-- endreplace-->
 </head>
+<style type="text/css">
+  paper-toolbar.paper-toolbar-0 {
+    background-image: url(http://orig05.deviantart.net/ef8c/f/2011/082/3/7/jace_themed_mtg_banner_large_by_removedfromplay-d3cbafu.jpg);
+    background-size:cover;
 
-
+    color: #ffffff;
+  }
+</style>
 <body unresolved class="fullbleed layout vertical">
   <span id="browser-sync-binding"></span>
-  
   <template is="dom-bind" id="app">
+
     <paper-drawer-panel id="paperDrawerPanel">
       <!-- Drawer Scroll Header Panel -->
       <paper-scroll-header-panel drawer fixed>
+
         <!-- Drawer Toolbar -->
         <paper-toolbar id="drawerToolbar">
           <span class="paper-font-title">Menu</span>
@@ -77,12 +84,12 @@ fasdfd
 
           <a data-route="users" href="/users">
             <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
+            <span>Match History</span>
           </a>
 
           <a data-route="contact" href="/contact">
             <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
+            <span>Settings</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -101,12 +108,12 @@ fasdfd
 
           <!-- Application name -->
           <div class="middle middle-container center horizontal layout">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">Lugo Counter</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">The future of the web today</div>
+            <div class="bottom-title paper-font-subhead">Magic the Gathering Score Keeper</div>
           </div>
 
         </paper-toolbar>
@@ -116,60 +123,379 @@ fasdfd
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
-              <paper-material elevation="1">
-                <my-greeting></my-greeting>
+              <paper-material elevation="1" style="height:500px;">
+                  <polymer-element id ="app-position" name="my-element">
+                <style>    
+                    :host {
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      box-sizing: border-box;
+                    }
+                    #core_card1 {
+                      position: absolute;
+                      width: 30%;
+                      height: 300px;
+                      border-radius: 2px;
+                      box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+                      left: 75%;
+                      top: 125px;
+                      margin-left: -15%;
+                      background-color: rgb(255, 255, 255);
+                  }
+                    #core_field {
+                      left: 960px;
+                      top: 410px;
+                    }
+                    #core_scroll_header_panel {
+                      width: 380px;
+                      height: 460px;
+                      left: 920px;
+                      top: 320px;
+                    }
+                    #core_drawer_panel {
+                      position: absolute;
+                      top: 420px;
+                      right: 0px;
+                      bottom: 0px;
+                      left: 1070px;
+                    }
+                    #core_menu {
+                      font-size: 16px;
+                      left: 900px;
+                      top: 360px;
+                    }
+                    #core_menu_button {
+                      left: 880px;
+                      top: 380px;
+                    }
+                    #section {
+                      left: 790px;
+                      top: 380px;
+                    }
+                    #core_selector {
+                      width: 100%;
+                      height: 50px;
+                      left: 840px;
+                      top: 380px;
+                    }
+                    #core_submenu {
+                      left: 870px;
+                      top: 420px;
+                    }
+                    #core_toolbar {
+                      right: 0px;
+                      left: 770px;
+                      color: rgb(255, 255, 255);
+                      fill: rgb(255, 255, 255);
+                      top: 330px;
+                      background-color: rgb(79, 125, 201);
+                    }
+                    #paper_radio_group {
+                      left: 860px;
+                      top: 460px;
+                    }
+                    #paper_slider {
+                      width: 300px;
+                      position:relative;
+                      top:250px;
+                    }
+                    #paper_tabs1 {
+                      width: 30%;
+                      color: rgb(255, 255, 255);
+                      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
+                      background-color: rgb(190, 22, 39);
+                      position: absolute;
+                      border-radius: 2px;
+                      left: 75%;
+                      top:76px;
+                      margin-left: -15%;
+                    }
+                    #paper_tabs {
+                        width: 30%;
+                        color: rgb(255, 255, 255);
+                        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
+                        position: absolute;
+                        background-color: rgb(0, 188, 212);
+                        left: 10%;
+                        top: 75px;
+                        margin-left: -30px;
+                    }
+                    #core_card2 {
+                      position: absolute;
+                      width: 30%;
+                      height: 300px;
+                      border-radius: 2px;
+                      box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+                      left: 10%;
+                      MARGIN-LEFT: -30px;
+                      top: 125px;
+                      background-color: rgb(255, 255, 255);
+                    }
+                    #paper_ripple {
+                      width: 100%;
+                      height: 300px;
+                    }
+                    #paper_ripple1 {
+                      width: 100%;
+                      height: 300px;
+                    }
+                    #paper_slider1 {
+                      width: 300px;
+                      position:relative;
+                      top:250px;
+                    }
+                    #paper_toast {
+                      left: 400px;
+                      top: 360px;
+                      position: absolute;
+                    }
+                    #input {
+                      height: 50px;
+                    }
+                    #reset{
+                      position:absolute;
+                      left:45%;
+                      top:40%;
+                      margin-top:-20px;
+                                            margin-left:-10px;
 
-                <p class="paper-font-subhead">You now have:</p>
-                <my-list></my-list>
+                      width:100px;
+                      height:100px;
+                      background-color:#424242;
+                    }
+                  </style>
+                  <paper-fab icon="polymer" id="reset"></paper-fab>
+                  
+                    <script type="text/javascript">
+                        reset();
+                       function reset() {
+                          var //valueCount = $("counter").value(),
+                              counter1 = $("#P1counter"),
+                              counter2 = $("#P2counter"),
+                              psncounter1 = $("#P1psncounter"),
+                              psncounter2 = $("#P2psncounter"),
+                              addBtn = $("#reset"),
+                              value=20,
+                              pvalue=0;
+                              addBtn.on("click", function() {
+                              counter1.html(value );
+                              counter2.html(value );
+                              
+                              psncounter1.html(pvalue );
+                              psncounter2.html(pvalue );
+                              console.log(value);
+                              return;
+                            
+                          });
+                          
+                        }
+                    </script>
+                  
+                  <paper-tabs selected="2" selectedindex="2" id="paper_tabs1" horizontal center layout>
+                      <paper-tab id="add" inline flex center-center horizontal layout>HP +</paper-tab>
+                      <paper-tab class="subtract-p1" inline flex center-center horizontal layout>HP-</paper-tab>
+                      <paper-tab id="paper_tab7" inline center-center horizontal layout two flex active>P2</paper-tab>
+                      <paper-tab id="psn-add-p1" inline flex center-center horizontal layout>Psn + </paper-tab>
+                      <paper-tab id="psn-subtract-p1" inline flex center-center horizontal layout>Psn -</paper-tab>
+                  </paper-tabs>
+                  <script type="text/javascript">
+                        P1psncounter_subtract();
+                       function P1psncounter_subtract() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P1psncounter"),
+                              addBtn = $("#psn-subtract-p1");
+                          
+                          addBtn.on("click", function() {
+                            var value = $("#P1psncounter").html();
+                          
+                            counter.html(--value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                        P1psncounter_add();
+                       function P1psncounter_add() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P1psncounter"),
+                              addBtn = $("#psn-add-p1");
+                              
+                          
+                          addBtn.on("click", function() {
+                            value = $("#P1psncounter").html();
+                          
+                            counter.html(++value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                        P1lifecounter_subtract();
+                       function P1lifecounter_subtract() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P1counter"),
+                              addBtn = $(".subtract-p1");
+                          
+                          addBtn.on("click", function() {
+                            var value = $("#P1counter").html();
+                          
+                            counter.html(--value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                        P1lifecounter_add();
+                       function P1lifecounter_add() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P1counter"),
+                              addBtn = $("#add");
+                              
+                          
+                          addBtn.on("click", function() {
+                            value = $("#P1counter").html();
+                          
+                            counter.html(++value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                    </script>
+                  <core-card id="core_card1" layout vertical>
+                    <paper-ripple id="paper_ripple"class = "subtract-p1"></paper-ripple>
+                    <paper-slider value="96" id="paper_slider1"></paper-slider>
+                    <div>
+                      <span id="P1counter" class= "subtract-p1" style="position:relative; top:0%; left:15%; font-size:128px;">20</span> <span style="color:green; position:relative; top:-0%; left:14%; font-size:64px;">/</span><span class= "subtract-p1" id ="P1psncounter"style="color:green; position:relative; top:-0%; left:14%; font-size:64px;">0</span>
+                    </div> 
+                   
+                    
+                  
+                  </core-card>
 
-                <p class="paper-font-body2">Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
+
+                  <paper-tabs selected="5" id="paper_tabs" horizontal center layout>
+                      <paper-tab id="add-p2" inline flex center-center horizontal layout>HP +</paper-tab>
+                      <paper-tab class="subtract-p2" inline flex center-center horizontal layout>HP -</paper-tab>
+                      <paper-tab id="paper_tab2" inline center-center horizontal layout>P1</paper-tab>
+                      <paper-tab id="psn-add-p2" inline flex center-center horizontal layout>Psn +</paper-tab>
+                      <paper-tab id="psn-subtract-p2" inline flex center-center horizontal layout>Psn -</paper-tab>
+                  </paper-tabs>
+                  
+                  <script type="text/javascript">
+                        P2psncounter_subtract();
+                       function P2psncounter_subtract() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P2psncounter"),
+                              addBtn = $("#psn-subtract-p2");
+                          
+                          addBtn.on("click", function() {
+                            var value = $("#P2psncounter").html();
+                          
+                            counter.html(--value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                        P2psncounter_add();
+                       function P2psncounter_add() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P2psncounter"),
+                              addBtn = $("#psn-add-p2");
+                              
+                          
+                          addBtn.on("click", function() {
+                            value = $("#P2psncounter").html();
+                          
+                            counter.html(++value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                        P2lifecounter_subtract();
+                       function P2lifecounter_subtract() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P2counter"),
+                              addBtn = $(".subtract-p2");
+                          
+                          addBtn.on("click", function() {
+                            var value = $("#P2counter").html();
+                          
+                            counter.html(--value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                        P2lifecounter_add();
+                       function P2lifecounter_add() {
+                          var //valueCount = $("counter").value(),
+                              counter = $("#P2counter"),
+                              addBtn = $("#add-p2");
+                              
+                          
+                          addBtn.on("click", function() {
+                            var value = $("#P2counter").html();
+                        
+                            counter.html(++value );
+                            console.log(value);
+                            return;
+                            
+                          });
+                          
+                        }
+                    </script>
+                  
+                  <core-card id="core_card2" layout vertical>
+                    <paper-ripple id="paper_ripple1" class="subtract-p2"></paper-ripple>
+                    <paper-slider id="paper_slider"></paper-slider>
+                    <span  class="subtract-p2" id="P2counter" style="position:relative; top:0%; left:15%; font-size:128px;">20</span><span style="color:green; position:relative; top:-0%; left:14%; font-size:64px;">/</span><span class="subtract-p2" id="P2psncounter" style="color:green; position:relative; top:-0%; left:14%; font-size:64px;">0</span>
+                    
+                  </core-card>
+            
+              
+              </polymer-element>
               </paper-material>
+              
               <paper-material elevation="1">
                 <p class="paper-font-body2">This is another card.</p>
               </paper-material>
 
-              <paper-material elevation="1" class="paper-font-body2">
-                <h1 id="license">License</h1>
-                <p>Everything in this repo is BSD style license unless otherwise specified.</p>
-                <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
-                <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
-                <ul>
-                <li>Redistributions of source code must retain the above copyright
-                notice, this list of conditions and the following disclaimer.</li>
-                <li>Redistributions in binary form must reproduce the above
-                copyright notice, this list of conditions and the following disclaimer
-                in the documentation and/or other materials provided with the
-                distribution.</li>
-                <li>Neither the name of Google Inc. nor the names of its
-                contributors may be used to endorse or promote products derived from
-                this software without specific prior written permission.</li>
-                </ul>
-                <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-              </paper-material>
+              
 
             </section>
 
             <section data-route="users">
               <paper-material elevation="1">
-                <h2 class="paper-font-display2">Users</h2>
-                <p>This is the users section</p>
-                <a href="/users/Rob">Rob</a>
+                <h2 class="paper-font-display2">Match History</h2>
+                <p>Subdivided by challenger name</p>
+                <a href="/users/Rob">Master Lugo</a>
               </paper-material>
             </section>
 
             <section data-route="user-info">
               <paper-material elevation="1">
                 <h2 class="paper-font-display2">
-                User:<span>{{params.name}}</span>
+                Challenger:<span>{{params.name}}</span>
                 </h2>
-                <div>This is <span>{{params.name}}</span>'s section</div>
+                <div> <span>{{params.name}}</span>Match History</div>
               </paper-material>
             </section>
 
             <section data-route="contact">
               <paper-material elevation="1">
-                <h2 class="paper-font-display2">Contact</h2>
-                <p>This is the contact section</p>
+                <h2 class="paper-font-display2">Settings</h2>
+                <p>settings are for wimps</p>
               </paper-material>
             </section>
 
